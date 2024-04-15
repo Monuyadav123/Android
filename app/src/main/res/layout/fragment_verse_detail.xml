@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".VerseDetailFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/llTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+
+                    <LinearLayout
+                        android:id="@+id/llBhagwatGita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="13dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/kalash" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="2.6dp"
+                            android:text="Shri Bhagwat Gita"
+                            android:textColor="@color/orange"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/kalash" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="24dp"
+                        android:src="@drawable/fav_border"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progressIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/orange"
+                    app:layout_anchor="@id/llBhagwatGita"
+                    app:indicatorColor="@color/orange"
+                    app:trackColor="#F8D6C9"
+                    app:layout_anchorGravity="bottom"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:id="@+id/tvVerseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="||1.6||"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginTop="13dp"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvVerseText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="यद्यप्येते न पश्यन्ति लोभोपहतचेतसः | कुलक्षयकृतं दोषं मित्रद्रोहे च पातकम् || 1.6 ||"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="13dp"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvVerseTranslation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="saubhadro draupadeyāśhcha sarva eva mahā-rathāḥ  qsdfa fasdf asdf asdf adsf adsf a asdfadsfadsfasdfad asdfasdf  adfasd fasdf asdfasdfads  asdfasdf"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    android:layout_marginHorizontal="6.50dp"
+                    android:gravity="center"
+                    android:layout_marginTop="13.00dp"
+                    android:textSize="14.30sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvWordIfEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="saubhadraḥ—the son of Subhadra; draupadeyāḥ—the sons of Draupadi; cha—and; sarve—all; eva—indeed; mahā-rathāḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    android:layout_marginHorizontal="6.50dp"
+                    android:gravity="center"
+                    android:layout_marginTop="13.00dp"
+                    android:textSize="14.30sp"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="65.00dp"
+                    android:src="@drawable/verse_view"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/backgroundVerse"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:alpha="0.15"
+                android:scaleType="centerInside"
+                android:src="@drawable/rangoli"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.110000014" />
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llTop"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/tvTranslation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6.50dp"
+                    android:layout_marginTop="13.00dp"
+                    android:gravity="center"
+                    android:text="Translation"
+                    android:textColor="@color/black"
+                    android:textSize="19.50sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clTranslation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="13dp"
+                    android:layout_marginTop="6dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_verse_card"
+                        android:orientation="vertical"
+                        android:padding="6.50dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="6.50dp">
+
+                            <TextView
+                                android:id="@+id/tvAuthor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Author"
+                                android:textColor="#575656"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" : "
+                                android:textColor="#000000"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/tvAuthorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Swaminivanandaandroid"
+                                android:textColor="#000000"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="6.50dp"
+                            android:paddingBottom="26.00dp"
+                            android:text="Yudhamanyu, the valiant one, and Uttamaujas, the strong one; and also the son of Subhadra, as well as the sons of Draupadi, all mighty warriors."
+                            android:textColor="#000000"
+                            android:textSize="16.90sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabTranslationLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:src="@drawable/baseline_keyboard_arrow_left_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabTranslationRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        app:tint="@color/white" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/tvConnentries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6.50dp"
+                    android:layout_marginTop="13.00dp"
+                    android:gravity="center"
+                    android:text="Commentary"
+                    android:textColor="@color/black"
+                    android:textSize="19.50sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCommentries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="13dp"
+                    android:paddingBottom="@dimen/_18sdp"
+                    android:layout_marginTop="6dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/llCommentry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_verse_card"
+                        android:orientation="vertical"
+                        android:padding="6.50dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="6.50dp">
+
+                            <TextView
+                                android:id="@+id/tvAuthorr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Author"
+                                android:textColor="#575656"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvArrowr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" : "
+                                android:textColor="#000000"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/tvAuthorCommentary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Swaminivanandaandroid"
+                                android:textColor="#000000"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvCommentaryText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="6.50dp"
+                            android:paddingBottom="10.00dp"
+                            android:maxLines="3"
+                            android:text="Yudhamanyu, the valiant one, and Uttamaujas, the strong one; and also the son of Subhadra, as well as the sons of Draupadi, all mighty warriors."
+                            android:textColor="#000000"
+                            android:textSize="16.90sp" />
+
+                        <TextView
+                            android:id="@+id/tvReadMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Read More..."
+                            android:textColor="@color/blue"
+                            android:layout_marginStart="6.50dp"
+                            android:paddingBottom="26.00dp"
+                            />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabCommentaryLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:src="@drawable/baseline_keyboard_arrow_left_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/llCommentry"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llCommentry"
+android:visibility="gone"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabCommentaryRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/llCommentry"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llCommentry"
+                        app:tint="@color/white" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
