@@ -40,8 +40,26 @@ class VerseDetailFragment : Fragment() {
 
         getAndSetChapAndVerseNum()
         getVerseDetail()
+        checkInternetConnectivity()
         return binding.root
     }
+
+//    NetworkManager__________________________________________________________________________________
+        private fun checkInternetConnectivity() {
+
+            val networkManager = NetworkManager(requireContext())
+            networkManager.observe(viewLifecycleOwner) {
+                if (it) {
+
+                    binding.noInternetMessage.visibility = View.GONE
+                    binding.noInternetImage.visibility = View.GONE
+                } else {
+                    binding.noInternetMessage.visibility = View.VISIBLE
+                    binding.noInternetImage.visibility = View.VISIBLE
+
+                }
+            }
+        }
 //    _________________________________________________________________________________________________
         private fun onReadMoreClick() {
             var isExpanded = false
